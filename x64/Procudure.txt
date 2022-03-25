@@ -37,11 +37,15 @@ vi exp.v
 	press I for insert
 	press ESC command mode & shift ":wq!" to quit
 
+xrun -access rwc dff.v dff_tst.v -gui
+
 --------------------Synthesize-------------------------------
 
 genus -legacy_ui
 
  read_hdl /home/cadence/DATABASE/test/rcfile/rtl/dff.v
+ 
+ set_attribute library /home/cadence/DATABASE/test/rcfiles/lib/slow_vdd blahblah blah
 
  set_attribute lib_search_path /home/cadence/DATABASE/test/rcfiles/rtl/
 
