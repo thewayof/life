@@ -1,0 +1,119 @@
+inverter
+
+pmos w=10u
+pmos w=2u
+
+vpulse
+v1 = 0
+v2 = 1
+rise time = 1n
+fall time = 1n
+period = 40n
+ac mag = 20n
+
+transient
+stop = 100n
+moderate
+
+Dc Response
+dc operating point
+start time = -1
+stop time = 1
+-----------------------------------------------------------------
+CS amplifier
+
+pmos L
+w=1.9u
+L=90n
+
+pmos R
+w=1.9u
+L=90n
+
+nmos L
+w=480n
+L=90n
+
+nmos R
+w=820n
+L=90n
+
+vsin - 
+ac mag = 1
+amplitude = 1m
+frequency = 1k
+
+trans 
+stop = 10m
+
+ac response
+frequency
+start = 10
+stop = 100G
+----------------------------------------------------------------------------------------
+CD amplifier
+
+nmos 
+w=50u
+L=1u
+
+nmos
+w=10u
+L=1u
+
+vsin
+ac magnitude = 1
+amplitude = 1v
+frequency = 1k
+
+transient
+stoptime = 5m
+
+ac response
+start = 10
+stop = 100G
+
+------------------------------------------------------------------------------------------
+
+Diff amplifier
+
+pmos L
+w=465n
+L=750n
+
+pmos R
+w=465n
+L=750n
+
+Nmos L
+w=1.5u
+L=750n
+
+nmos R
+w=1.5u
+L=750n
+
+nmos BL
+w=1.09u
+L=750n
+
+nmos BR
+w=1.09u
+L=750n
+ 
+vsin
+acmag = 1
+amp = 5m
+freq = 1k
+
+transient response
+stop time = 5m or 10m
+
+ac response
+frequency
+start = 10
+stop = 100G
+--------------------------------------------------------------------------------------------------
+OP amp
+
+may god have mercy on your soul
