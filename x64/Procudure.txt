@@ -1,0 +1,57 @@
+open terminal
+
+su
+
+root@123
+
+mount -a
+
+mount
+
+exit
+
+exit
+
+____________________
+
+Open Terminal
+
+csh
+
+source cshrc_client
+
+----------------after welcome note-------------
+
+cd DATABASE
+
+mkdir name_usn
+
+cd name_usn
+
+mkdir exp_name
+
+cd exp_name
+
+vi exp.v
+
+	press I for insert
+	press ESC command mode & shift ":wq!" to quit
+
+--------------------Synthesize-------------------------------
+
+genus -legacy_ui
+
+ read_hdl /home/cadence/DATABASE/test/rcfile/rtl/dff.v
+
+ set_attribute lib_search_path /home/cadence/DATABASE/test/rcfiles/rtl/
+
+ elaborate dff(module name)
+
+ synthesize -to_mapped
+
+ gui_show
+
+report timing > updownctl
+report area   > updown
+
+-------------------------------------------------------------------------------------------
